@@ -24,8 +24,7 @@ import componentsTeams from '../components/TeamsBox'
 import componentsPartner from '../components/PartnerBox'
 
 export default {
-  components: { componentsBanner, componentsService, componentsReport, componentsNews, componentsTeams, componentsPartner
-  },
+  components: { componentsBanner, componentsService, componentsReport, componentsNews, componentsTeams, componentsPartner },
   data() {
     return {
       slide: 0,

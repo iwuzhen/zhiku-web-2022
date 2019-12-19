@@ -67,7 +67,7 @@
           <b-col
             cols="10"
           >
-            <span>浙ICP备16036026号</span>
+            <span><a href="http://www.beian.miit.gov.cn">浙ICP备19034365号</a></span>
           </b-col>
         </b-row>
       </div>
@@ -133,6 +133,9 @@ export default {
     height: 56px;
     line-height: 56px;
     color: #999999;
+    a{
+        color: rgba(255, 255, 255, 0.502);
+      }
   }
   .footer-logo {
     display: inline-block;
@@ -260,7 +263,13 @@ export default {
       line-height: 1.2;
     }
     .footerICPinfo{
-      display: none;
+      // display: none;
+      height: 6vw;
+      line-height: 6vw;
+      color: #999999;
+      a{
+        color: rgba(255, 255, 255, 0.502);
+      }
     }
     .wechatQRImg{
       width: 12vw;

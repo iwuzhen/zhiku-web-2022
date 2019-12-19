@@ -43,7 +43,7 @@
           align="center"
         />
       </div>
-      <div class="reportMoreBotton" @click="getMoreReport">
+      <div @click="getMoreReport" class="reportMoreBotton">
         <span v-if="hasMore">查看更多新闻</span>
         <span v-else style="color: #ccc;">暂无更多</span>
       </div>
@@ -75,7 +75,7 @@ export default {
       }, {
         label: '产业',
         value: 'industry'
-      } ],
+      }],
       selectIndex: 0,
       reportDatas: [],
       hasMore: true,
