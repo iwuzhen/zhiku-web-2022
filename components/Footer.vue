@@ -130,6 +130,7 @@ export default {
     }
   }
   .footerICPinfo{
+    // display: none;
     height: 56px;
     line-height: 56px;
     color: #999999;
@@ -166,6 +167,7 @@ export default {
     line-height: 30px;
   }
   .wechatQRImg{
+
     width: 90px;
     height: 90px;
     float: right;
@@ -276,5 +278,24 @@ export default {
       height: 12vw;
     }
   }
+}
+@media (max-width: 1198px ) and (min-width:768px) {
+
+.component-footer {
+  width: 100%;
+  height: 450px;
+  background-image: url(./../assets/img/footbg.png);
+  background-position: 50%;
+  background-size: cover;
+  color: #fff;
+  font-size: 12px;
+  .footerMap{
+    height: 380px;
+    padding-top: 47px;
+    line-height: 24px;
+  }
+
+}
+
 }
 </style>
