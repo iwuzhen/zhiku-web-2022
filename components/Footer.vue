@@ -77,14 +77,14 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
     }
   },
-  created() {
+  created () {
   },
   methods: {
-    openWindowFuc(url) {
+    openWindowFuc (url) {
       window.open(url, '_blank')
     }
   }
