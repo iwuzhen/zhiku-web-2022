@@ -67,7 +67,7 @@
           <b-col
             cols="10"
           >
-            <span><a href="http://www.beian.miit.gov.cn">浙ICP备19034365号</a></span>
+            <span><a href="https://beian.miit.gov.cn" target="_blank">浙ICP备19034365号-1</a></span>
           </b-col>
         </b-row>
       </div>
