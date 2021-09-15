@@ -83,7 +83,7 @@ export default {
   mounted() {},
   methods: {
     getNewsCount() {
-      $get('/api/news/count').then((res) => {
+      $get('/api/news_count').then((res) => {
         this.rows = res
         this.currentPage = 1
       }).catch((rej) => {})
