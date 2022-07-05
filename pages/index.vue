@@ -9,7 +9,7 @@
     <!-- 动态新闻 -->
     <componentsNews />
     <!-- 智库团队 -->
-    <componentsTeams />
+    <!-- <componentsTeams /> -->
     <!-- 合作伙伴 -->
     <componentsPartner />
   </section>
@@ -20,11 +20,11 @@ import componentsBanner from '../components/BannerBox'
 import componentsService from '../components/ServiceBox'
 import componentsReport from '../components/ReportBox'
 import componentsNews from '../components/NewsBox'
-import componentsTeams from '../components/TeamsBox'
+// import componentsTeams from '../components/TeamsBox'
 import componentsPartner from '../components/PartnerBox'
 
 export default {
-  components: { componentsBanner, componentsService, componentsReport, componentsNews, componentsTeams, componentsPartner },
+  components: { componentsBanner, componentsService, componentsReport, componentsNews, componentsPartner },
   data() {
     return {
       slide: 0,
