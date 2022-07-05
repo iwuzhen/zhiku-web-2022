@@ -1,9 +1,9 @@
-FROM node as builder
+FROM node:16 as builder
 WORKDIR /tmp/
 COPY . .
 RUN npm --registry=https://registry.npm.taobao.org i && npm run build
 
-FROM node
+FROM node:16
 WORKDIR /tmp/
 COPY --from=builder /tmp/.nuxt ./.nuxt
 COPY --from=builder /tmp/static ./static
