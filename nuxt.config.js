@@ -63,6 +63,11 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-    }
+    },
+    babel:{
+      plugins:[
+        ["@babel/plugin-proposal-private-property-in-object", { "loose": true }]
+      ]
+   }
   }
 }
