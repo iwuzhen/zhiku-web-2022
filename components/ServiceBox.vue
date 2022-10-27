@@ -12,8 +12,8 @@
           @mouseenter="showActive(1)"
           @mouseleave="showActive(0)"
         >
-          <b-img src="../assets/img/service1.png" fluid alt="Responsive image" />
-          <b-img v-if="serviceIndex === 1" class="hoverimg" src="../assets/img/service1_h.png" fluid alt="Responsive image" />
+          <b-img src="../assets/img/service1.webp" fluid alt="Responsive image" />
+          <b-img v-if="serviceIndex === 1" class="hoverimg" src="../assets/img/service1_h.webp" fluid alt="Responsive image" />
           <p class="label">
             海量数据
           </p>
@@ -31,8 +31,8 @@
           @mouseenter="showActive(2)"
           @mouseleave="showActive(0)"
         >
-          <b-img src="../assets/img/service2.png" fluid alt="Responsive image" />
-          <b-img v-if="serviceIndex === 2" class="hoverimg" src="../assets/img/service2_h.png" fluid alt="Responsive image" />
+          <b-img src="../assets/img/service2.webp" fluid alt="Responsive image" />
+          <b-img v-if="serviceIndex === 2" class="hoverimg" src="../assets/img/service2_h.webp" fluid alt="Responsive image" />
           <p class="label">
             知识图谱
           </p>
@@ -50,8 +50,8 @@
           @mouseenter="showActive(3)"
           @mouseleave="showActive(0)"
         >
-          <b-img src="../assets/img/service3.png" fluid alt="Responsive image" />
-          <b-img v-if="serviceIndex === 3" class="hoverimg" src="../assets/img/service3_h.png" fluid alt="Responsive image" />
+          <b-img src="../assets/img/service3.webp" fluid alt="Responsive image" />
+          <b-img v-if="serviceIndex === 3" class="hoverimg" src="../assets/img/service3_h.webp" fluid alt="Responsive image" />
           <p class="label">
             机器学习
           </p>
@@ -69,8 +69,8 @@
           @mouseenter="showActive(4)"
           @mouseleave="showActive(0)"
         >
-          <b-img src="../assets/img/service4.png" fluid alt="Responsive image" />
-          <b-img v-if="serviceIndex === 4" class="hoverimg" src="../assets/img/service4_h.png" fluid alt="Responsive image" />
+          <b-img src="../assets/img/service4.webp" fluid alt="Responsive image" />
+          <b-img v-if="serviceIndex === 4" class="hoverimg" src="../assets/img/service4_h.webp" fluid alt="Responsive image" />
           <p class="label">
             自然语言理解
           </p>
@@ -88,8 +88,8 @@
           @mouseenter="showActive(5)"
           @mouseleave="showActive(0)"
         >
-          <b-img src="../assets/img/service5.png" fluid alt="Responsive image" />
-          <b-img v-if="serviceIndex === 5" class="hoverimg" src="../assets/img/service5_h.png" fluid alt="Responsive image" />
+          <b-img src="../assets/img/service5.webp" fluid alt="Responsive image" />
+          <b-img v-if="serviceIndex === 5" class="hoverimg" src="../assets/img/service5_h.webp" fluid alt="Responsive image" />
           <p class="label">
             数据可视化
           </p>

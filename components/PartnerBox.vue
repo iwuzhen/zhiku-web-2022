@@ -37,7 +37,7 @@ export default {
   name: 'PartnerBox',
   components: {},
   props: {},
-  data() {
+  data () {
     return {
       partnerImgs: [],
       isMobile: false,
@@ -47,16 +47,17 @@ export default {
   },
   computed: {},
   watch: {},
-  created() {
+  created () {
     this.isMobile = this.$isMobile === 1
     this.partnerImgs = []
     this.getImages()
   },
-  mounted() {
+  mounted () {
   },
   methods: {
-    getImages() {
-      $get('/api/partners').then((res) => {
+    getImages () {
+      // $get('/api/partners').then((res) => {
+      $get('/_data/partners.json').then((res) => {
         if (res) {
           res.forEach((item) => {
             this.partnerImgs.push({
@@ -68,7 +69,7 @@ export default {
         this.partnerImgs = []
       })
     },
-    imgLoading() {
+    imgLoading () {
       this.loadingNum++
       if (this.loadingNum === this.partnerImgs.length * 2) {
         this.$nextTick(() => {
@@ -76,8 +77,8 @@ export default {
         })
       }
     },
-    imgMove() {
-      if (this.isMobile) return false
+    imgMove () {
+      if (this.isMobile) { return false }
       const _dom = this.$refs.partnerList
       const _w = _dom.scrollWidth
       setInterval(() => {

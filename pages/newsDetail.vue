@@ -68,7 +68,7 @@ export default {
   width: 100%;
   color: #f7f7f7;
   .newsDetailBanner{
-    background-image: url(../assets/img/newsbanner.png);
+    background-image: url(../assets/img/newsbanner.webp);
   }
   .newsDetailPageCount{
     min-height: calc(100vh - 616px);

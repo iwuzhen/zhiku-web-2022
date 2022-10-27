@@ -41,26 +41,27 @@ export default {
   name: 'ReportBox',
   components: {},
   props: {},
-  data() {
+  data () {
     return {
       reportDatas: []
     }
   },
   computed: {},
   watch: {},
-  created() {
+  created () {
     this.getReprotList()
   },
-  mounted() {},
+  mounted () {},
   methods: {
-    getReprotList() {
+    getReprotList () {
       const _parame = {
         tags: '',
         offset: 0,
         limit: 3
       }
       this.reportDatas = []
-      $get('/api/reports', _parame).then((res) => {
+      // $get('/api/reports', _parame).then((res) => {
+      $get('/_data/reports.json', _parame).then((res) => {
         try {
           res.forEach((item) => {
             this.reportDatas.push({
@@ -71,13 +72,14 @@ export default {
               content: item.abstract
             })
           })
+          this.reportDatas = this.reportDatas.slice(0, 3)
           this.reportDatas.reverse()
         } catch (error) {
           this.reportDatas = []
         }
       }).catch((rej) => {})
     },
-    linkMore() {
+    linkMore () {
       this.$router.push({
         path: '/report'
       })

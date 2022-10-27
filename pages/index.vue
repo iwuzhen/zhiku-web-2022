@@ -25,17 +25,17 @@ import componentsPartner from '../components/PartnerBox'
 
 export default {
   components: { componentsBanner, componentsService, componentsReport, componentsNews, componentsPartner },
-  data() {
+  data () {
     return {
       slide: 0,
       sliding: null
     }
   },
   methods: {
-    onSlideStart(slide) {
+    onSlideStart (slide) {
       this.sliding = true
     },
-    onSlideEnd(slide) {
+    onSlideEnd (slide) {
       this.sliding = false
     }
   }
@@ -70,7 +70,7 @@ export default {
     color: #04142b;
     font-size: 12px;
     font-weight: bold;
-    background-image: url("../assets/img/moreIconBg.png");
+    background-image: url("../assets/img/moreIconBg.webp");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     cursor: pointer;

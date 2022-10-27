@@ -28,15 +28,15 @@
 </template>
 
 <script>
-const img1 = require('../assets/img/consultant1.png')
-const img2 = require('../assets/img/consultant2.png')
-const img3 = require('../assets/img/consultant3.png')
-const img4 = require('../assets/img/consultant4.png')
+const img1 = require('../assets/img/consultant1.webp')
+const img2 = require('../assets/img/consultant2.webp')
+const img3 = require('../assets/img/consultant3.webp')
+const img4 = require('../assets/img/consultant4.webp')
 export default {
   name: 'Consultant',
   components: {},
   props: {},
-  data() {
+  data () {
     return {
       consultantData: [{
         img: img1,
@@ -59,8 +59,8 @@ export default {
   },
   computed: {},
   watch: {},
-  created() {},
-  mounted() {},
+  created () {},
+  mounted () {},
   methods: {}
 }
 </script>
@@ -68,7 +68,7 @@ export default {
 <style scoped lang="less">
 .page-consultant{
   .consultantBanner{
-    background-image: url(../assets/img/consultantbanner.png);
+    background-image: url(../assets/img/consultantbanner.webp);
   }
   .consultantCount{
     width: 100%;

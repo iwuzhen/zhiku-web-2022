@@ -43,7 +43,7 @@
           align="center"
         />
       </div>
-      <div @click="getMoreReport" class="reportMoreBotton">
+      <div class="reportMoreBotton" @click="getMoreReport">
         <span v-if="hasMore">查看更多新闻</span>
         <span v-else style="color: #ccc;">暂无更多</span>
       </div>
@@ -55,7 +55,7 @@
 import { $get } from '~/plugins/axios'
 export default {
   name: 'Report',
-  data() {
+  data () {
     return {
       currentPage: 1,
       perPage: 9,
@@ -86,7 +86,7 @@ export default {
   computed: {},
   watch: {
     selectIndex: {
-      handler(nVal) {
+      handler (nVal) {
         this.currentPage = 1
         this.hasMore = true
         this.reportDatas = []
@@ -96,7 +96,7 @@ export default {
       }
     },
     currentPage: {
-      handler(nVal) {
+      handler (nVal) {
         if (!this.indexChange || this.currentPage !== 1) {
           this.getReprotList()
         }
@@ -104,7 +104,7 @@ export default {
       }
     }
   },
-  created() {
+  created () {
     this.isMobile = this.$isMobile === 1
     if (this.isMobile) {
       this.perPage = 3
@@ -112,22 +112,23 @@ export default {
     this.getReprotCount()
     this.getReprotList()
   },
-  mounted() {
+  mounted () {
   },
   methods: {
-    getReprotCount() {
-      const _parame = {
-        tags: this.selsectData[this.selectIndex].value
-      }
-      $get('/api/reports/count', _parame).then((res) => {
-        try {
-          this.rows = res
-        } catch (error) {
-          this.rows = 0
-        }
-      }).catch((rej) => {})
+    getReprotCount () {
+      // const _parame = {
+      //   tags: this.selsectData[this.selectIndex].value
+      // }
+      // $get('/api/reports/count', _parame).then((res) => {
+      //   try {
+      //     this.rows = res
+      //   } catch (error) {
+      //     this.rows = 0
+      //   }
+      // }).catch((rej) => {})
+      this.rows = 11
     },
-    getReprotList() {
+    getReprotList () {
       const _parame = {
         tags: this.selsectData[this.selectIndex].value,
         offset: (this.currentPage - 1) * this.perPage,
@@ -136,7 +137,8 @@ export default {
       if (!this.isMobile) {
         this.reportDatas = []
       }
-      $get('/api/reports', _parame).then((res) => {
+      // $get('/api/reports', _parame).then((res) => {
+      $get('/_data/reports.json', _parame).then((res) => {
         // eslint-disable-next-line
         console.log(res)
         try {
@@ -149,6 +151,14 @@ export default {
               content: item.abstract
             })
           })
+
+          // 2022 added
+          const startPost = (this.currentPage - 1) * this.perPage
+          if (!this.isMobile) {
+            this.reportDatas = this.reportDatas.slice(startPost, startPost + this.perPage)
+          } else {
+            this.reportDatas = this.reportDatas.slice(0, startPost + this.perPage)
+          }
         } catch (error) {
           if (!this.isMobile) {
             this.reportDatas = []
@@ -157,7 +167,7 @@ export default {
         }
       }).catch((rej) => {})
     },
-    getMoreReport() {
+    getMoreReport () {
       if (this.rows > (this.currentPage - 1) * this.perPage) {
         this.currentPage = this.currentPage + 1
       } else {
@@ -172,7 +182,7 @@ export default {
 .page-report{
   background: #f6f6f7;
   .reportBanner{
-    background-image: url(../assets/img/reportbanner.png);
+    background-image: url(../assets/img/reportbanner.webp);
   }
   .reportSelsectBox{
     display: inline-block;

@@ -83,7 +83,7 @@ export default {
 .page-about{
   background: #f7f7f7;
   .aboutBanner{
-    background-image: url(../assets/img/aboutbanner.png);
+    background-image: url(../assets/img/aboutbanner.webp);
   }
   .aboutPageCount{
     min-height: calc(100vh - 616px);

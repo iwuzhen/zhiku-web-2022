@@ -9,7 +9,7 @@
     >
       <div class="main-panel clearfix">
         <b-navbar-brand href="/">
-          <img src="../assets/img/logo.png" class="d-inline-block align-top logoImg" alt="Kitten">
+          <img src="../assets/img/logo.webp" class="d-inline-block align-top logoImg" alt="Kitten">
         </b-navbar-brand>
         <b-navbar-toggle target="nav_collapse">
           <!-- <div>

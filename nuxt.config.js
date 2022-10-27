@@ -49,7 +49,7 @@ module.exports = {
   },
   proxy: {
     '/api': {
-      target: 'http://www.iwuzhen.org:9080',
+      target: 'https://www.iwuzhen.top',
       pathRewrite: { '^/api': '' },
       changeOrigin: true,
       secure: false

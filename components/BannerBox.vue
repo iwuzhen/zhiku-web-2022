@@ -10,7 +10,7 @@
         </div> -->
       </div>
       <div class="main_bannerRightImg">
-        <img src="@/assets/img/bannerRight.png" alt="">
+        <img src="@/assets/img/bannerRight.webp" alt="">
       </div>
       <!-- <i class="main_bannerMouseIcon" /> -->
     </div>
@@ -19,18 +19,17 @@
 
 <script>
 export default {
-  name: 'C',
+  name: 'BannerBox',
   components: {},
   props: {},
-  data() {
+  data () {
     return {
-
     }
   },
   computed: {},
   watch: {},
-  created() {},
-  mounted() {
+  created () {},
+  mounted () {
   },
   methods: {
   }
@@ -43,7 +42,7 @@ export default {
   position: relative;
   .bannerBox{
     position: relative;
-    background-image: url('../assets/img/banner1.jpg');
+    background-image: url('../assets/img/banner1.webp');
     .main_bannerTitle{
       padding-top: 220px;
       .main_bannerTitleZh{
@@ -70,7 +69,7 @@ export default {
         color: #fff;
         font-size: 12px;
         font-weight: bold;
-        background-image: url("../assets/img/moreIconBg.png");
+        background-image: url("../assets/img/moreIconBg.webp");
         background-repeat: no-repeat;
         background-size: 100% 100%;
         cursor: pointer;
@@ -89,7 +88,7 @@ export default {
       position: absolute;
       width: 12px;
       height: 16px;
-      background-image: url('../assets/img/mouseIcon.png');
+      background-image: url('../assets/img/mouseIcon.webp');
       left: 50%;
       transform: translate(-50%);
       bottom: 30px;

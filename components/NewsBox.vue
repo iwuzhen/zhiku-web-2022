@@ -26,7 +26,7 @@
               </p>
               <p class="moreButton" @click="LinkPage(item.url)">
                 查看全部
-                <b-img src="../assets/img/arrows.png" fluid alt="image" />
+                <b-img src="../assets/img/arrows.webp" fluid alt="image" />
               </p>
             </div>
           </div>
@@ -45,7 +45,7 @@ export default {
   name: 'NewsBox',
   components: {},
   props: {},
-  data() {
+  data () {
     return {
       params: {
         offset: '0',
@@ -56,15 +56,16 @@ export default {
   },
   computed: {},
   watch: {},
-  created() {
+  created () {
     this.getNewsData()
   },
-  mounted() {
+  mounted () {
   },
   methods: {
-    getNewsData() {
+    getNewsData () {
       this.newsData = []
-      $get('/api/news', this.params).then((res) => {
+      // $get('/api/news', this.params).then((res) => {
+      $get('/_data/news.json', this.params).then((res) => {
         try {
           res.forEach((item) => {
             this.newsData.push({
@@ -78,14 +79,17 @@ export default {
         } catch (error) {
           this.newsData = []
         }
+
+        this.newsData = this.newsData.slice(0, 3)
+        this.newsData.reverse()
       }).catch((rej) => {})
     },
-    LinkPage(url) {
+    LinkPage (url) {
       if (url) {
         window.open(url, '_blank')
       }
     },
-    linkMore() {
+    linkMore () {
       this.$router.push({
         path: '/news'
       })

@@ -59,7 +59,7 @@
               关注我们
             </p>
             <div class="wechatQRImg">
-              <b-img right src="../assets/img/wechatQR.jpg" alt="Right image" />
+              <b-img right src="../assets/img/wechatQR.webp" alt="Right image" />
             </div>
           </b-col>
         </b-row>
@@ -95,7 +95,7 @@ export default {
 .component-footer {
   width: 100%;
   height: 246px;
-  background-image: url(./../assets/img/footbg.png);
+  background-image: url(./../assets/img/footbg.webp);
   background-position: 50%;
   background-size: cover;
   color: #fff;
@@ -144,7 +144,7 @@ export default {
     height: 30px;
     margin-bottom: 17px;
     float: none;
-    background-image: url(./../assets/img/logo.png);
+    background-image: url(./../assets/img/logo.webp);
     background-size: 100%;
     background-repeat: no-repeat;
   }
@@ -284,7 +284,7 @@ export default {
 .component-footer {
   width: 100%;
   height: 450px;
-  background-image: url(./../assets/img/footbg.png);
+  background-image: url(./../assets/img/footbg.webp);
   background-position: 50%;
   background-size: cover;
   color: #fff;

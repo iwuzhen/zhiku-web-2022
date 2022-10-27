@@ -53,12 +53,12 @@ export default {
   name: 'NewsPage',
   components: {},
   filters: {
-    timeFilter(val) {
+    timeFilter (val) {
       return timeFilter(val)
     }
   },
   props: {},
-  data() {
+  data () {
     return {
       currentPage: 0,
       perPage: 4,
@@ -70,25 +70,27 @@ export default {
   },
   computed: {},
   watch: {
-    currentPage(nVal) {
+    currentPage (nVal) {
       if (nVal) {
         this.getNewsList()
       }
     }
   },
-  created() {
+  created () {
     this.isMobile = this.$isMobile === 1
     this.getNewsCount()
   },
-  mounted() {},
+  mounted () {},
   methods: {
-    getNewsCount() {
-      $get('/api/news_count').then((res) => {
-        this.rows = res
-        this.currentPage = 1
-      }).catch((rej) => {})
+    getNewsCount () {
+      // $get('/api/news_count').then((res) => {
+      //   this.rows = res
+      //   this.currentPage = 1
+      // }).catch((rej) => {})
+      this.rows = 37
+      this.currentPage = 1
     },
-    getNewsList() {
+    getNewsList () {
       const _params = {
         offset: (this.currentPage - 1) * this.perPage,
         limit: this.perPage
@@ -96,7 +98,8 @@ export default {
       if (!this.isMobile) {
         this.newsData = []
       }
-      $get('/api/news', _params).then((res) => {
+      // $get('/api/news', _params).then((res) => {
+      $get('/_data/news.json', _params).then((res) => {
         try {
           res.forEach((item) => {
             this.newsData.push({
@@ -108,6 +111,13 @@ export default {
               url: item.url
             })
           })
+          // 2022 added
+          const startPost = (this.currentPage - 1) * this.perPage
+          if (!this.isMobile) {
+            this.newsData = this.newsData.slice(startPost, startPost + this.perPage)
+          } else {
+            this.newsData = this.newsData.slice(0, startPost + this.perPage)
+          }
         } catch (error) {
           if (!this.isMobile) {
             this.newsData = []
@@ -116,12 +126,12 @@ export default {
         }
       }).catch((rej) => {})
     },
-    linkDetail(url) {
+    linkDetail (url) {
       if (url) {
         window.open(url, '_blank')
       }
     },
-    getMoreNews() {
+    getMoreNews () {
       if (this.rows > (this.currentPage - 1) * this.perPage) {
         this.currentPage = this.currentPage + 1
       } else {
@@ -137,7 +147,7 @@ export default {
   width: 100%;
   background: #f7f7f7;
   .newsBanner{
-    background-image: url(../assets/img/newsbanner.png);
+    background-image: url(../assets/img/newsbanner.webp);
   }
   .newsPageCount{
     min-height: calc(100vh - 616px);
